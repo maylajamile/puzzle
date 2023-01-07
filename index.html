@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quebra-Cabeça</title>
+    <style>
+        body {
+            background-color: #2d3436;
+        }
+        .fundo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        h1 {
+            position: absolute;
+            top: 15%;
+            color: #fff;
+            font-size: 4em;
+        }
+        .botao {
+            position: absolute;
+            top: 40%;
+            width: 200px;
+            height: 80px;
+            border: 0;
+            line-height: 2.5;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 2em;
+            font-family: sans-serif;
+            color: #fff;
+            border-radius: 35px;
+            background-color: #758918;
+            background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+            
+        }
+        .botao:hover{
+            box-shadow: inset 2px 2px 3px #9e9a41, inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+        }
+        #canvas{
+            position: absolute;
+            top: 30%;
+            left: 24%;
+            border-radius: 35px;
+            display: flex;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="fundo">
+        <h1>Quebra-Cabeça</h1>
+        <canvas id="canvas" width="1000" height="550"></canvas>
+        <input id="botao" class="botao" type="button" value="Jogar" onclick="mostrarMenu()">
+    </div>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            function mostrarMenu() {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                context.fillStyle = "#cfb590";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+                document.getElementById('botao').style.display = 'none';
+
+                desenharImagens();
+            }
+
+            function desenharImagens() {
+
+                console.log("foi");
+
+                var img1 = new Image();
+                img1.src = "/imagens/puzzle1.png";
+                img1.onload = function() {
+                    context.drawImage(img1, 200, 30, 260, 230);
+                };
+
+                var img2 = new Image();
+                img2.src = "/imagens/puzzle2.jpeg";
+                img2.onload = function() {
+                    context.drawImage(img2, 550, 30, 260, 230);
+                };
+
+                img3 = new Image();
+                img3.src = "/imagens/puzzle3.jpeg";
+                img3.onload = function() {
+                    context.drawImage(img3, 200, 290, 260, 230);
+                };
+
+                img4 = new Image();
+                img4.src = "/imagens/puzzle4.jpeg";
+                img4.onload = function() {
+                    context.drawImage(img4, 550, 290, 260, 230);
+                };
+
+            }
+
+        </script>
+</body>
+</html>

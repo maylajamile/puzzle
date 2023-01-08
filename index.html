@@ -8,42 +8,32 @@
     <div class="fundo">
         <h1>Quebra-Cabeça</h1>
         <div class="quadro" id="quadro">
-            <input id="botao" class="botao" type="button" value="Jogar" onclick="mostrarMenu()">
-            <div id="imagens">
-                <h2>Escolha a imagem do quebra-cabeça:</h2>
-                <ul>
-                    <li>
-                      <img src="/imagens/puzzle1.png" width="220" height="220" onclick="iniciarJogo(this)">
-                    </li>
-                    <li>
-                      <img src="/imagens/puzzle2.jpeg" width="220" height="220" onclick="iniciarJogo(this)">
-                    </li>
-                    <li> 
-                      <img src="/imagens/puzzle3.jpeg" width="220" height="220" onclick="iniciarJogo(this)">
-                    </li>
-                    <li>
-                      <img src="/imagens/puzzle4.jpeg" width="220" height="220" onclick="iniciarJogo(this)">
-                    </li>
-                  </ul>
-            </div>
+            <input id="botao" class="botao" type="button" value="Jogar" onclick="iniciarJogo()">
+            <div id="quebra-cabeca"></div>
         </div>
     </div>
         <script>
-            var canvas = document.getElementById("canvas");
-            var context = canvas.getContext("2d");
-
-            function mostrarMenu() {
-                document.getElementById('quadro').style.backgroundColor = '#cfb590';
-                document.getElementById('botao').style.display = 'none';
-                desenharImagens();
-            }
-
-            function desenharImagens() {
-                document.getElementById('imagens').style.display = 'block';
-            }
-
             function iniciarJogo(imagem){
-                console.log(imagem.src);
+
+                document.getElementById('botao').style.display = 'none';
+                document.getElementById('quebra-cabeca').style.display = 'block';
+
+                const quebra_cabeca = document.getElementById("quebra-cabeca");
+
+                for(var i = 0; i < 4; i++){
+                    for(var j = 0; j < 6; j++){
+                        var novaPeca = document.createElement("div");
+                        novaPeca.id="x"+"j"+"y"+i;
+                        novaPeca.style.top=i*50+"px";
+                        novaPeca.style.left=j*50+"px";
+                        novaPeca.style.backgroundPositionX=((j*25/(6-1))*100)+"%";
+                        novaPeca.style.backgroundPositionY=((i*25/(4-1))*100)+"%";
+                        novaPeca.setAttribute("onclick", "clicarPeca(this)");
+                        quebra_cabeca.appendChild(novaPeca);
+                    }
+                }
+
+
             }
         </script>
 </body>

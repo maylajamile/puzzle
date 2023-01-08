@@ -43,6 +43,21 @@ h1 {
     height: 460px;
     text-align: center;
 }
+#quebra-cabeca{
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+#quebra-cabeca div {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: url(/imagens/puzzle2.jpg);
+    background-size: 300px 200px;
+    transition: 0.25s ease-in-out;
+}
 .botao:hover{
     box-shadow: inset 3px 3px 3px #9e9a41, inset -3px -3px 4px rgba(0, 0, 0, 0.6);
 }

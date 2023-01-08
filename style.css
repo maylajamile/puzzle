@@ -58,6 +58,12 @@ h1 {
     background-size: 600px 400px;
     transition: 0.25s ease-in-out;
 }
+#quebra-cabeca div:hover{
+    z-index: 10;
+    opacity: 0.7;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 3px 3px white;
+}
 .botao:hover{
     box-shadow: inset 3px 3px 3px #9e9a41, inset -3px -3px 4px rgba(0, 0, 0, 0.6);
 }

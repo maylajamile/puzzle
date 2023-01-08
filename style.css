@@ -44,8 +44,8 @@ h1 {
     text-align: center;
 }
 #quebra-cabeca{
-    height: 200px;
-    width: 300px;
+    height: 400px;
+    width: 600px;
     margin: 0 auto;
     position: relative;
     display: none;
@@ -55,7 +55,7 @@ h1 {
     height: 50px;
     position: absolute;
     background: url(/imagens/puzzle2.jpg);
-    background-size: 300px 200px;
+    background-size: 600px 400px;
     transition: 0.25s ease-in-out;
 }
 .botao:hover{

@@ -20,14 +20,14 @@
 
                 const quebra_cabeca = document.getElementById("quebra-cabeca");
 
-                for(var i = 0; i < 4; i++){
-                    for(var j = 0; j < 6; j++){
+                for(var i = 0; i < 8; i++){
+                    for(var j = 0; j < 12; j++){
                         var novaPeca = document.createElement("div");
                         novaPeca.id="x"+"j"+"y"+i;
                         novaPeca.style.top=i*50+"px";
                         novaPeca.style.left=j*50+"px";
-                        novaPeca.style.backgroundPositionX=((j*25/(6-1))*100)+"%";
-                        novaPeca.style.backgroundPositionY=((i*25/(4-1))*100)+"%";
+                        novaPeca.style.backgroundPositionX=((j*25/(12-1))*100)+"%";
+                        novaPeca.style.backgroundPositionY=((i*25/(8-1))*100)+"%";
                         novaPeca.setAttribute("onclick", "clicarPeca(this)");
                         quebra_cabeca.appendChild(novaPeca);
                     }

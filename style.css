@@ -1,5 +1,5 @@
 body {
-    background-image: url("/imagens/puzzlebg.jpeg");
+    background-image: url("imagens/puzzlebg.jpeg");
 }
 .fundo {
     display: flex;
@@ -55,12 +55,12 @@ h1 {
     width: 53.5px;
     height: 53.5px;
     position: absolute;
-    background: url(/imagens/puzzle.jpg);
+    background: url(imagens/puzzle.jpg);
     background-size: 640px 427px;
     transition: 0.25s ease-in-out;
 }
 #imagem{
-    background: url(/imagens/puzzle.jpg);
+    background: url(imagens/puzzle.jpg);
     width: 640px;
     height: 405px;
     display: none;

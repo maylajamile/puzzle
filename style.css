@@ -74,36 +74,3 @@ h1 {
 .botao:hover{
     box-shadow: inset 3px 3px 3px #9e9a41, inset -3px -3px 4px rgba(0, 0, 0, 0.6);
 }
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-}
-li {
-    height: 40vh;
-    padding: 8px;
-}
-li:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
-  }
-img {
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-}
-#imagens{
-    display: none;
-    position: absolute;
-    top:10%;
-    right: 2%;
-    left: 0.6%;
-}
-#imagens h2{
-    font-size: 2.5em;
-    font-family: sans-serif;
-    color: #474747;
-    font-family: Arial, Helvetica, sans-serif;
-}

@@ -35,34 +35,41 @@ h1 {
 .quadro{
     position: absolute;
     top: 60%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
-    border-radius: 15px;
     padding: 15px;
-    width: 1000px;
+    width: 1400px;
     height: 460px;
     text-align: center;
+    display: flex;
 }
 #quebra-cabeca{
-    height: 400px;
-    width: 600px;
+    height: 427px;
+    width: 640px;
     margin: 0 auto;
     position: relative;
     display: none;
+    margin-left: 40px;
 }
 #quebra-cabeca div {
-    width: 50px;
-    height: 50px;
+    width: 53.5px;
+    height: 53.5px;
     position: absolute;
-    background: url(/imagens/puzzle2.jpg);
-    background-size: 600px 400px;
+    background: url(/imagens/puzzle.jpg);
+    background-size: 640px 427px;
     transition: 0.25s ease-in-out;
+}
+#imagem{
+    background: url(/imagens/puzzle.jpg);
+    width: 640px;
+    height: 405px;
+    display: none;
 }
 #quebra-cabeca div:hover{
     z-index: 10;
     opacity: 0.7;
     transform: scale(1.1);
-    box-shadow: 0px 0px 3px 3px white;
+    box-shadow: 0px 0px 5px 5px white;
 }
 .botao:hover{
     box-shadow: inset 3px 3px 3px #9e9a41, inset -3px -3px 4px rgba(0, 0, 0, 0.6);
